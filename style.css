@@ -1,0 +1,153 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    line-height: 1.6;
+    transition: all 0.3s ease;
+}
+
+/* Header */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #01d262;
+    color: white;
+    padding: 10px 20px;
+    transition: all 0.3s ease;
+}
+
+.logo {
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+.nav .nav-list {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav .nav-list li {
+    margin: 0 10px;
+}
+
+.nav .nav-list a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.nav .nav-list a:hover {
+    color: #ffd700;
+}
+
+/* Main Content Area */
+.main-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    padding: 20px;
+    transition: all 0.3s ease;
+}
+
+.text-content {
+    padding: 20px;
+    background-color: #f4f4f4;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.image-content img {
+    width: 100%;
+    border-radius: 8px;
+}
+
+/* Footer */
+.footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px 20px;
+    transition: all 0.3s ease;
+}
+
+.footer .social-links a {
+    color: #01d262;
+    text-decoration: none;
+    margin: 0 5px;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.footer .social-links a:hover {
+    color: #ffd700;
+}
+
+/* Media Queries */
+
+/* Small screens (up to 600px) */
+@media (max-width: 600px) {
+    .header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .nav .nav-list {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .nav .nav-list li {
+        margin: 5px 0;
+    }
+
+    .main-content {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Medium screens (601px to 1024px) */
+@media (min-width: 601px) and (max-width: 1024px) {
+    .main-content {
+        grid-template-columns: 1fr;
+    }
+
+    .header {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .nav .nav-list {
+        flex-direction: row;
+        justify-content: flex-end;
+    }
+}
+
+/* Large screens (above 1024px) */
+@media (min-width: 1025px) {
+    .main-content {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+/* Animations */
+
+/* Smooth transitions for resizing */
+@media (max-width: 1024px) {
+    .header, .main-content, .footer {
+        transition: all 0.3s ease-in-out;
+    }
+}
+
+.image-content img {
+    transition: transform 0.3s ease;
+}
+
+.image-content img:hover {
+    transform: scale(1.05);
+}
